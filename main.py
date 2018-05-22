@@ -13,10 +13,15 @@ def main():
     screen = pygame.display.set_mode(SCREEN_SIZE)
     #タイトルバーの文字列をセット
     pygame.display.set_caption(u"シューティングゲーム")
+    #FPSの取得
+    clock = pygame.time.Clock()
 
     myship = MyShip(50,50)
-
+    
     while True:
+        #FPSを60に設定
+        clock.tick(60)
+
         #背景色の設定
         screen.fill((255,255,255))
 
