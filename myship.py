@@ -14,6 +14,17 @@ class MyShip:
         self.y = y
         self.width = 30
         self.height = 50
+        self.speed = 5
+        self.direction = {"right": False,"left": False,"up": False,"down": False}
+
+    def move(self):
+        if self.direction["right"] == True:
+            self.x += self.speed
+        if self.direction["left"] == True:
+            self.x -= self.speed
+
+        for dir in direction:
+            dir = False
 
     def draw(self, pygame, screen):
         pygame.draw.rect(screen, (170,170,170), Rect(self.x - self.width/2,self.y - self.height/2,self.width,self.height))

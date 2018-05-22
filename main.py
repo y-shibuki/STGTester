@@ -21,15 +21,16 @@ def main():
         screen.fill((255,255,255))
 
         # ***いろんな処理*** #
+        myship.move()
         myship.draw(pygame,screen)
 
         #画面の更新
         pygame.display.update()
 
         for event in pygame.event.get():
-            if event.type == QUIT:
-                pygame.quit()
-                sys.exit()
+            if event.type == QUIT: pygame.quit(); sys.exit()
+            elif event.type ==KEYDOWN
+                if event.key == K_RIGHT: myship.direction["right"] = True
 
 if __name__ == "__main__":
     main()
