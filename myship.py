@@ -14,7 +14,7 @@ class MyShip:
         self.y = y
         self.width = 30
         self.height = 50
-        self.speed = 1
+        self.speed = 3
         self.direction = {"right": False,"left": False,"up": False,"down": False}
 
     def move(self):
