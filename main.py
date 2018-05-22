@@ -29,8 +29,16 @@ def main():
 
         for event in pygame.event.get():
             if event.type == QUIT: pygame.quit(); sys.exit()
-            elif event.type ==KEYDOWN
+            elif event.type == KEYDOWN:
                 if event.key == K_RIGHT: myship.direction["right"] = True
+                elif event.key == K_LEFT: myship.direction["left"] = True
+                if event.key == K_UP: myship.direction["up"] = True
+                elif event.key == K_DOWN: myship.direction["down"] = True
+            elif event.type == KEYUP:
+                if event.key == K_RIGHT: myship.direction["right"] = False
+                elif event.key == K_LEFT: myship.direction["left"] = False
+                if event.key == K_UP: myship.direction["up"] = False
+                elif event.key == K_DOWN: myship.direction["down"] = False
 
 if __name__ == "__main__":
     main()
