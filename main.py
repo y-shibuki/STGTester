@@ -1,6 +1,8 @@
+# coding: utf-8
 import pygame
 from pygame.locals import *
 import sys
+from myship import MyShip
 
 SCREEN_SIZE = (400,400)
 
@@ -12,9 +14,15 @@ def main():
     #タイトルバーの文字列をセット
     pygame.display.set_caption(u"シューティングゲーム")
 
+    myship = MyShip(50,50)
+
     while True:
         #背景色の設定
         screen.fill((255,255,255))
+
+        # ***いろんな処理*** #
+        myship.draw(pygame,screen)
+
         #画面の更新
         pygame.display.update()
 
