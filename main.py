@@ -5,11 +5,11 @@ import sys
 from myship import MyShip
 from enemies import Enemies
 
+#Pygameの初期化
+pygame.init()
 SCREEN_SIZE = (400,400)
 
 def main():
-    #Pygameの初期化
-    pygame.init()
     #SCREEN_SIZEの画面を作成
     screen = pygame.display.set_mode(SCREEN_SIZE)
     #タイトルバーの文字列をセット
