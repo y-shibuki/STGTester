@@ -1,5 +1,6 @@
 import pygame
-from pygame.locals import *
+#from pygame.locals import *
+from pygame.locals import Rect
 
 class MyShip:
     """自機クラス
