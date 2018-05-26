@@ -8,24 +8,18 @@ class Enemy:
     x y -- 敵の中心座標
     """
 
-    def __init__(self, x, y):
+    def __init__(self):
         #敵の中心座標をセットして初期化する
-        self.x = x
-        self.y = y
+        self.x = -100
+        self.y = 50
         self.width = 30
         self.height = 50
-        self.speed = 3
-        self.direction = {"right": False,"left": False,"up": False,"down": False}
-
+        self.time = 0
+        self.death_flag = True
+    
     def move(self):
-        if self.direction["right"] == True:
-            self.x += self.speed
-        if self.direction["left"] == True:
-            self.x -= self.speed
-        if self.direction["down"] == True:
-            self.y += self.speed
-        if self.direction["up"] == True:
-            self.y -= self.speed
+        self.x += 4
+        self.time += 1
 
     def draw(self, pygame, screen):
-        pygame.draw.rect(screen, (170,170,170), Rect(self.x - self.width/2,self.y - self.height/2,self.width,self.height))
+        pygame.draw.circle(screen, (255,0,0), (self.x,self.y), 20)

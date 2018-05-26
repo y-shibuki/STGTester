@@ -3,6 +3,7 @@ import pygame
 from pygame.locals import *
 import sys
 from myship import MyShip
+from enemies import Enemies
 
 SCREEN_SIZE = (400,400)
 
@@ -17,6 +18,8 @@ def main():
     clock = pygame.time.Clock()
 
     myship = MyShip(50,50)
+
+    enemies = Enemies()
     
     while True:
         #FPSを60に設定
@@ -27,11 +30,13 @@ def main():
 
         # ***いろんな処理*** #
         myship.move()
+        enemies.move()
+
         myship.draw(pygame,screen)
+        enemies.draw(pygame,screen)
 
         #画面の更新
         pygame.display.update()
-
         for event in pygame.event.get():
             if event.type == QUIT: pygame.quit(); sys.exit()
             elif event.type == KEYDOWN:
