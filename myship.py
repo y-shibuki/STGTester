@@ -15,6 +15,7 @@ class MyShip:
         self.y = y
         self.width = 30
         self.height = 50
+        self.r = 5
         self.speed = 3
         self.direction = {"right": False,"left": False,"up": False,"down": False}
 
@@ -30,4 +31,5 @@ class MyShip:
 
     def draw(self, pygame, screen):
         pygame.draw.rect(screen, (170,170,170), Rect(self.x - self.width/2,self.y - self.height/2,self.width,self.height))
+        pygame.draw.circle(screen, (255,0,0,125), (self.x,self.y),self.r)
 
