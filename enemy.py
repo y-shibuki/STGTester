@@ -55,12 +55,21 @@ class SimpleEnemy(Enemy):
             self.y = -G.E_DISAPPEAR_MARGIN + 10
     
     def move(self):
-        pass
+        if self.pattern == 1:
+            self.x += 3
 
-    def draw(self, pygame, screen):
-        pygame.draw.circle(screen, (255,0,0), (self.x,self.y), 20)
+        elif self.pattern == 2:
+            self.y += 3
 
-class SimplePairEnemy:
+        elif self.pattern == 3:
+            if self.time < 50:
+                self.y += 3
+            elif self.time >= 50:
+                pass
+
+        self.time += 1
+
+class SimplePairEnemy(Enemy):
     """単純な動きを複数で行う敵
 
     プロパティ:
@@ -79,8 +88,4 @@ class SimplePairEnemy:
         self.death_flag = True
     
     def move(self):
-        self.x += 4
         self.time += 1
-
-    def draw(self, pygame, screen):
-        pygame.draw.circle(screen, (255,0,0), (self.x,self.y), 20)

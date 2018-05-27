@@ -1,4 +1,4 @@
-from enemy import Enemy
+from enemy import SimpleEnemy
 
 class Enemies:
     """
@@ -9,7 +9,7 @@ class Enemies:
     """
     def __init__(self):
         self.enemy_datas = []
-        self.addEnemy(Enemy())
+        self.addEnemy(SimpleEnemy(1))
 
     def addEnemy(self,enemy_data):
         self.enemy_datas.append(enemy_data)
