@@ -1,17 +1,17 @@
 # coding: utf-8
 import pygame
-from pygame.locals import *
+from pygame.locals import Rect,QUIT,K_DOWN,K_UP,K_RIGHT,K_LEFT,KEYDOWN,KEYUP
 import sys
+import global_data
 from myship import MyShip
 from enemies import Enemies
 
 #Pygameの初期化
 pygame.init()
-SCREEN_SIZE = (400,400)
 
 def main():
     #SCREEN_SIZEの画面を作成
-    screen = pygame.display.set_mode(SCREEN_SIZE)
+    screen = pygame.display.set_mode(global_data.SCREEN_SIZE)
     #タイトルバーの文字列をセット
     pygame.display.set_caption(u"シューティングゲーム")
     #FPSの取得
