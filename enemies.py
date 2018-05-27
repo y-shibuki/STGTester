@@ -13,6 +13,12 @@ class Enemies:
 
     def addEnemy(self,enemy_data):
         self.enemy_datas.append(enemy_data)
+    
+    def reloadEnemy(self):
+        for enemy_data in self.enemy_datas:
+            enemy_data.isDisappear()
+            if enemy_data.death_flag == True:
+                self.enemy_datas.remove(enemy_data)
 
     def move(self):
         for enemy_data in self.enemy_datas:

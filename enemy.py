@@ -17,6 +17,9 @@ class Enemy:
         self.height = 50
         self.time = 0
         self.death_flag = False
+
+    def move(self):
+        pass
     
     def isDisappear(self):
         if self.x > G.WIDTH + G.E_DISAPPEAR_MARGIN or \

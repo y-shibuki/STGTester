@@ -32,6 +32,8 @@ def main():
         myship.move()
         enemies.move()
 
+        enemies.reloadEnemy()
+
         myship.draw(pygame,screen)
         enemies.draw(pygame,screen)
 
