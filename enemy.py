@@ -1,6 +1,7 @@
 import pygame
 #from pygame.locals import *
 import global_data as G
+from bullets import SimpleBullet
 
 class Enemy:
     """敵クラス

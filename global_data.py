@@ -2,6 +2,6 @@ SCREEN_SIZE = (600,600)
 WIDTH = 600
 HEIGHT = 600
 
-#Enemyが画面外で消失する余白
-E_DISAPPEAR_MARGIN = 50
+E_DISAPPEAR_MARGIN = 50 #Enemyが画面外で消失する余白
 
+B_DISAPPEAR_MARGIN = 100 #Bulletが画面外で消失する余白
